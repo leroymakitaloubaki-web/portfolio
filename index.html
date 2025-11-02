@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Mécatronique — Leroy</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #f5f7fa; }
+    .hero-lab { background: linear-gradient(135deg,#eef4ff,#e3ecff); border-bottom:2px solid #cdd9f5; }
+    .blueprint-bg{background-image:url('https://i.ibb.co/1M3b2jm/blueprint-grid.png');background-size:450px;opacity:.08;position:absolute;inset:0;pointer-events:none;}
+    .card-lab{border-left:4px solid #1b3a7c;background:#fff;}
+    .card-lab:hover{transform:translateY(-4px);border-left-color:#4885ff;box-shadow:0 6px 18px rgba(0,0,0,.08);}    
+    section{scroll-margin-top:90px;}
+  </style>
+  <script>
+    function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('hidden')}
+    function toggleDarkMode(){document.documentElement.classList.toggle('dark');localStorage.setItem('theme',document.documentElement.classList.contains('dark')?'dark':'light')}
+    if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark')}
+  </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+
+<nav class="fixed top-0 w-full bg-white dark:bg-gray-800 shadow z-50 px-6 py-3 flex items-center justify-between">
+  <div class="flex items-center space-x-2">
+    <button class="md:hidden px-3 py-2 border rounded" onclick="toggleMenu()">☰</button>
+    <a href="index.htmlindex.html" class="font-bold">Leroy | Portfolio</a>
+  </div>
+  <ul class="hidden md:flex space-x-6 font-medium">
+    <li><a href="index.htmlindex.html" class="hover:text-blue-500">Accueil</a></li>
+    <li><a href="mecatronique.html" class="hover:text-blue-500">Mécatronique</a></li>
+    <li><a href="cao.html" class="hover:text-blue-500">CAO</a></li>
+    <li><a href="electronique.html" class="hover:text-blue-500">Électronique</a></li>
+    <li><a href="ia.html" class="hover:text-blue-500">IA</a></li>
+    <li><a href="automatisme.html" class="hover:text-blue-500">Automatisme</a></li>
+    <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
+  </ul>
+  <button onclick="toggleDarkMode()" class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded">🌙/☀️</button>
+</nav>
+
+<div id="mobileMenu" class="hidden fixed top-14 bg-white dark:bg-gray-800 left-0 right-0 shadow-lg p-2 space-y-2">
+  <a onclick="toggleMenu()" href="index.htmlindex.html">Accueil</a>
+  <a onclick="toggleMenu()" href="mecatronique.html">Mécatronique</a>
+  <a onclick="toggleMenu()" href="cao.html">CAO</a>
+  <a onclick="toggleMenu()" href="electronique.html">Électronique</a>
+  <a onclick="toggleMenu()" href="ia.html">IA</a>
+  <a onclick="toggleMenu()" href="automatisme.html">Automatisme</a>
+  <a onclick="toggleMenu()" href="contact.html">Contact</a>
+</div>
+
+<!-- ACCUEIL -->
+<section id="accueil" class="hero-lab min-h-screen flex flex-col justify-center items-center text-center px-6 relative pt-24">
+  <div class="blueprint-bg"></div>
+  <h1 class="text-4xl font-bold mb-4">Bienvenue dans mon univers mécatronique 🤖⚡</h1>
+  <p class="max-w-xl">Étudiant en mécatronique, passionné par la conception de systèmes intelligents alliant mécanique, électronique et informatique embarquée. Mon objectif : développer des solutions innovantes dans les domaines des drones, de la robotique et de l’IA appliquée.</p>
+</section>
+
+<!-- DOMAINES -->
+<section class="max-w-6xl mx-auto py-20 px-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  <a href="mecatronique.html" class="card-lab p-6 rounded-xl shadow block hover:shadow-xl transition">Mécatronique</a>
+  <a href="cao.html" class="card-lab p-6 rounded-xl shadow block hover:shadow-xl transition">CAO</a>
+  <a href="electronique.html" class="card-lab p-6 rounded-xl shadow block hover:shadow-xl transition">Électronique</a>
+  <a href="ia.html" class="card-lab p-6 rounded-xl shadow block hover:shadow-xl transition">IA</a>
+  <a href="automatisme.html" class="card-lab p-6 rounded-xl shadow block hover:shadow-xl transition">Automatisme</a>
+  <a href="contact.html" class="card-lab p-6 rounded-xl shadow block hover:shadow-xl transition">Contact</a>
+</section>
+
+<footer class="py-6 text-center opacity-70 text-sm">© 2025 Leroy — Portfolio</footer>
+</body>
+</html>
